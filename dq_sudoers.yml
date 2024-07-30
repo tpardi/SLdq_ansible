@@ -1,0 +1,32 @@
+---
+# Make sure all packages are up to date
+- name: Update your system sudoers file
+  become: "{{ dq.ad }}"
+  tasks:
+  - name: Apps access
+    community.general.sudoers:
+      name: apps-service
+      group: lx-oracle-app@dq.ad
+      commands:
+        - /usr/bin/su - cissys
+        - /usr/bin/su - applmgr
+      nopassword: true
+
+  - name: DBAs access
+    community.general.sudoers:
+      name: dba-service
+      group: lx-oracle-dba@dq.ad
+      commands:
+        - /usr/bin/su - oracle
+        - /usr/bin/su - applmgr
+      nopassword: true
+ 
+  - name: UAs access
+    community.general.sudoers:
+      name: dba-service
+      group: lx-rhadmin-ssh@dq.ad
+      commands:
+        - /usr/bin/su - oracle
+        - /usr/bin/su - applmgr
+      nopassword: true
+
