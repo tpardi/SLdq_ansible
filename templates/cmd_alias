@@ -1,0 +1,8 @@
+Cmnd_Alias      ADMIN = /usr/bin/su
+Cmnd_Alias      APPLMGR = /usr/bin/su - applmgr
+Cmnd_Alias      ORACLE = /usr/bin/su - oracle
+Cmnd_Alias      MOB = /usr/bin/su - oraclemb
+Cmnd_Alias      RMB = /usr/bin/su - cissys
+Cmnd_Alias      ASM = /usr/bin/su - grid
+Cmnd_Alias      PERF = /usr/bin/top
+Cmnd_Alias	DSK = /usr/sbin/vgs, /usr/sbin/lvs, /usr/sbin/pvs

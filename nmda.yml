@@ -1,0 +1,15 @@
+---
+- name: This playbook is for installating or upgrading Networker
+  hosts: linux_clients
+  become: yes
+  
+
+  tasks:
+  - name: Copy the installation files
+    copy:
+      src: /fs011/lgto/nmda/link.sh
+      dest: /tmp/nmda/
+  
+  - name: Install the NetWorker client binaries
+    shell:
+      cmd: sudo /tmp/nmda/link.sh

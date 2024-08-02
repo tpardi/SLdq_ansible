@@ -1,0 +1,51 @@
+---
+- name: This playbook is for installating or upgrading Networker
+  become: true
+  hosts: all
+
+  tasks:
+  - name: Copy the LGTO installation files
+    copy:
+      src: /fs011/lgto/aix/lgto/
+      dest: /tmp/NEW/
+      mode: 755
+    when: ansible_distribution == 'AIX' and hostvars[inventory_hostname].sncat == 'aixdb'
+
+  - name: Copy the NMDA installation files
+    copy:
+      src: /fs011/lgto/aix/nmda/
+      dest: /tmp/NEW/
+      mode: 755
+    when: ansible_distribution == 'AIX' and hostvars[inventory_hostname].sncat == 'aixdb'
+
+  - name: Install Networker Redhat Linux
+    ansible.builtin.dnf:
+      name:
+        - http://10.93.221.83/rhel-8.6/lgtoclnt-19.11.0.0-1.i686.rpm
+        - http://10.93.221.83/rhel-8.6/lgtoxtdclnt-19.11.0.0-1.i686.rpm
+        - http://10.93.221.83/rhel-8.6/lgtoman-19.11.0.0-1.i686.rpm
+      disable_gpg_check: True
+      state: latest
+    when: ansible_distribution == 'RedHat'
+
+  - name: Install Networker NMDA Redhat Linux
+    ansible.builtin.dnf:
+      name: http://10.93.221.83/rhel-8.6/lgtonmda-19.7.0.5-1.x86_64.rpm
+      disable_gpg_check: True
+      state: latest
+    when: ansible_distribution == 'RedHat' and hostvars[inventory_hostname].sncat == 'linuxdb'
+
+  - name: Install Networker AIX
+    shell:
+      cmd: cd /tmp/NEW; installp -acXd . LGTOnw.clnt.rte LGTOnw.man.rte LGTOnw.xtdclnt.rte
+    when: ansible_distribution == 'AIX'
+
+  - name: Install Networker NMDA AIX
+    shell:
+      cmd: cd /tmp/NEW; installp -acXd . LGTOnmda.rte 
+    when: ansible_distribution == 'AIX' and hostvars[inventory_hostname].sncat  == 'aixdb'
+  
+  - name: Create a symbolic link
+    shell:
+      cmd: . /home/oracle/19c.env; cd ${ORACLE_HOME}/lib; ln -s /usr/lib/libnsrora.so libobk.so
+    when: hostvars[inventory_hostname].sncat == 'linuxdb' or hostvars[inventory_hostname].sncat == 'aixdb'

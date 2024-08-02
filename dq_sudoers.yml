@@ -1,32 +1,104 @@
 ---
 # Make sure all packages are up to date
 - name: Update your system sudoers file
-  become: "{{ dq.ad }}"
+  become: true
+  hosts: all
   tasks:
-  - name: Apps access
+  - name: Cmd alias copy
+    ansible.builtin.copy:
+      src: /fs011/ansible/SLdq_ansible/templates/cmd_alias
+      dest: /etc/sudoers.d/cmd_alias
+      owner: root
+      group: root
+      mode: 0640
+
+  - name: Prod Apps access
+    when: ansible_domain == "dq.ad"
     community.general.sudoers:
-      name: apps-service
+      name: prod-apps-service
       group: lx-oracle-app@dq.ad
       commands:
         - /usr/bin/su - cissys
         - /usr/bin/su - applmgr
       nopassword: true
-
-  - name: DBAs access
+      
+  - name: Prod DBAs access
+    when: ansible_domain == "dq.ad"
     community.general.sudoers:
-      name: dba-service
+      name: prod-dba-service
       group: lx-oracle-dba@dq.ad
       commands:
         - /usr/bin/su - oracle
         - /usr/bin/su - applmgr
       nopassword: true
- 
-  - name: UAs access
+
+  - name: Prod UAs access
+    when: ansible_domain == "dq.ad"
     community.general.sudoers:
-      name: dba-service
+      name: prod-ua-service
       group: lx-rhadmin-ssh@dq.ad
       commands:
         - /usr/bin/su - oracle
         - /usr/bin/su - applmgr
       nopassword: true
+  - name: Test Apps access
+    when: ansible_domain == "dqtest.ad"
+    community.general.sudoers:
+      name: test-apps-service
+      group: lx-oracle-app@dqtest.ad
+      commands:
+        - /usr/bin/su - cissys
+        - /usr/bin/su - applmgr
+      nopassword: true
+
+  - name: Test DBAs access
+    when: ansible_domain == "dqtest.ad"
+    community.general.sudoers:
+      name: test-dba-service
+      group: lx-oracle-dba@dqtest.ad
+      commands:
+        - /usr/bin/su - oracle
+        - /usr/bin/su - applmgr
+      nopassword: true
+
+  - name: Test UAs access
+    when: ansible_domain == "dqtest.ad"
+    community.general.sudoers:
+      name: test-ua-service
+      group: lx-rhadmin-ssh@dqtest.ad
+      commands:
+        - /usr/bin/su - oracle
+        - /usr/bin/su - applmgr
+      nopassword: true
+
+  - name: Dev Apps access
+    when: ansible_domain == "dqdev.ad"
+    community.general.sudoers:
+      name: dev-apps-service
+      group: lx-oracle-app@dqdev.ad
+      commands:
+        - /usr/bin/su - cissys
+        - /usr/bin/su - applmgr
+      nopassword: true
+
+  - name: Dev DBAs access
+    when: ansible_domain == "dqdev.ad"
+    community.general.sudoers:
+      name: test-dba-service
+      group: lx-oracle-dba@dqdev.ad
+      commands:
+        - /usr/bin/su - oracle
+        - /usr/bin/su - applmgr
+      nopassword: true
+
+  - name: Dev UAs access
+    when: ansible_domain == "dqdev.ad"
+    community.general.sudoers:
+      name: test-ua-service
+      group: lx-rhadmin-ssh@dqdev.ad
+      commands:
+        - /usr/bin/su - oracle
+        - /usr/bin/su - applmgr
+      nopassword: true
+
 

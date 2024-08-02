@@ -1,0 +1,31 @@
+---
+- name: This playbook is for installating or upgrading Networker
+  hosts: linux_clients
+  become: yes
+  
+
+  tasks:
+  - name: Copy the installation files
+    copy:
+      src: /fs011/lgto/RPM/
+      dest: /tmp/NEW/
+  
+  - name: Install the NetWorker client binaries
+    yum:
+      name: /tmp/lgtoclnt-19.11.0.0-1.i686.rpm
+      state: present
+    notify: Start the NetWorker service
+  
+  handlers:
+  - name: Start the NetWorker service
+    service:
+      name: networker
+      enabled: yes
+      state: restarted
+    notify: update servers file
+ 
+  - name: update servers file
+    copy:
+      content: "Backup_server"
+      dest: /nsr/res/servers
+    notify: Start the NetWorker service
