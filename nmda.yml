@@ -5,11 +5,6 @@
   
 
   tasks:
-  - name: Copy the installation files
-    copy:
-      src: /fs011/lgto/nmda/link.sh
-      dest: /tmp/nmda/
-  
-  - name: Install the NetWorker client binaries
+  - name: Create a symbolic link
     shell:
-      cmd: sudo /tmp/nmda/link.sh
+      cmd: . /home/oracle/19c.env; cd ${ORACLE_HOME}/lib; ln -s /usr/lib/libnsrora.so libobk.so

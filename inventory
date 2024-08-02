@@ -1,1 +1,76 @@
-waebsodb01t.dqtest.ad
+    phops99pr ansible_host=10.83.221.65 ansible_user=root sncat=aixdb
+phoraemcc01p.dq.ad
+phobidb01p.dq.ad
+phobiap02p.dq.ad
+waobiap02t.dqtest.ad
+wacrmapp03d.dqdev.ad
+wacrmappdev01d.dqdev.ad
+wacrmappdev02d.dqdev.ad
+wacrmappqa01t.dqtest.ad
+wacrmappuat01t.dqtest.ad
+wacrmsqluat01t.dqtest.ad
+waigrgbr01t
+waigrgbr01t.dqtest.ad
+waigrgbr02t
+waigrgbr02t.dqtest.ad
+waigrgbr03t
+waigrgbr03t.dqtest.ad
+waigrmga01d.dqdev.ad
+waigrmol01t.dqtest.ad
+waigrmol02t
+waigrmol02t.dqtest.ad
+waigrmol03t.dqtest.ad
+waigrnfs01t.dqtest.ad
+wainflnxmgmt01p.dq.ad
+wainftws101tr
+walabrhsat01d.dqdev.ad
+waneotr01t.dqtest.ad
+waobiap02t
+waoraemcc01t.dqtest.ad
+waormodb03d
+waormweb03d
+[appservers]
+    chorafa12tr.dqtest.ad ansible_host=10.93.221.165 ansible_user=root sncat=aixapp
+    wanim200tr.dqtest.ad ansible_host=10.93.221.200 ansible_user=root sncat=aixapp
+    chorafa12tr.dqtest.ad ansible_host=10.93.221.165 ansible_user=root sncat=aixapp
+    waorafa22dr.dqdev.ad ansible_host=10.93.221.27 ansible_user=root sncat=aixapp
+    waorafa32dr.dqdev.ad ansible_host=10.93.221.28 ansible_user=root sncat=aixapp
+    waorafa42tr.dqtest.ad ansible_host=10.93.221.39 ansible_user=root sncat=aixapp
+    waorafa62dr.dqdev.ad ansible_host=10.93.221.67 ansible_user=root sncat=aixapp
+    waorafa52tr.dqtest.ad ansible_host=10.93.221.77 ansible_user=root sncat=aixapp
+    waorafa72dr.dqdev.ad ansible_host=10.93.221.79 ansible_user=root sncat=aixapp
+    waormbwa01sbr.dqdev.ad ansible_host=10.93.221.49 ansible_user=root sncat=aixapp
+    waormbwa01ter.dqtest.ad ansible_host=10.93.221.50 ansible_user=root sncat=aixapp
+    waormbwa02ter.dqtest.ad ansible_host=10.93.221.51 ansible_user=root sncat=aixapp
+    waormbba01ter.dqtest.ad ansible_host=10.93.221.52 ansible_user=root sncat=aixapp
+    waormbwa01gcr.dqtest.ad ansible_host=10.93.221.55 ansible_user=root sncat=aixapp
+    waormbwa01trr.dqtest.ad ansible_host=10.93.221.57 ansible_user=root sncat=aixapp
+    waormbwa01der.dqdev.ad ansible_host=10.93.221.59 ansible_user=root sncat=aixapp
+    waebsweb01t.dqtest.ad sncat=linuxapp
+    waebsweb02t.dqtest.ad sncat=linuxapp
+    waebsweb03t.dqtest.ad sncat=linuxapp
+    waebsweb01d.dqdev.ad sncat=linuxapp
+    waebsweb02d.dqdev.ad sncat=linuxapp
+    waebsweb03d.dqdev.ad sncat=linuxapp
+    waebsweb04d.dqdev.ad sncat=linuxapp
+[dbservers]
+    choradb11tr.dqtest.ad ansible_host=10.93.221.164 ansible_user=root sncat=aixdb
+    waoradb21dr.dqdev.ad ansible_host=10.93.221.23 ansible_user=root sncat=aixdb
+    waoradb31dr.dqdev.ad ansible_host=10.93.221.24 ansible_user=root sncat=aixdb
+    waoradb41tr.dqtest.ad ansible_host=10.93.221.38 ansible_user=root sncat=aixdb
+    waoradb61dr.dqdev.ad ansible_host=10.93.221.66 ansible_user=root sncat=aixdb
+    waoradb51tr.dqtest.ad ansible_host=10.93.221.76 ansible_user=root sncat=aixdb
+    waoradb71dr.dqdev.ad ansible_host=10.93.221.78 ansible_user=root sncat=aixdb
+    waormbdb01sbr.dqdev.ad ansible_host=10.93.221.48 ansible_user=root sncat=aixdb
+    waormbdb01ter.dqtest.ad ansible_host=10.93.221.53 ansible_user=root sncat=aixdb
+    waormbdb02ter.dqtest.ad ansible_host=10.93.221.54 ansible_user=root sncat=aixdb
+    waormbdb01gcr.dqtest.ad ansible_host=10.93.221.56 ansible_user=root sncat=aixdb
+    waebsodb01t.dqtest.ad sncat=linuxdb
+    waebsodb02t.dqtest.ad sncat=linuxdb
+    waebsodb03t.dqtest.ad sncat=linuxdb
+    waebsodb01d.dqdev.ad sncat=linuxdb
+    waebsodb02d.dqdev.ad sncat=linuxdb
+    waebsodb03d.dqdev.ad sncat=linuxdb
+    wamobcgdb01d.dqdev.ad sncat=linuxdb 
+    phrmandb01p.dq.ad sncat=linuxdb
+    waebsodb04d.dqdev.ad sncat=linuxdb
