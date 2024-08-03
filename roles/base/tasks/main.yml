@@ -1,0 +1,24 @@
+---
+# Base tasks lists
+- name: create user
+  tags: always
+  ansible.builtin.user:
+    name: ansible
+    group: adm
+
+- name: add sudoers file for ansible
+  tags: always
+  ansible.builtin.copy:
+    src: sudoers_ansible
+    dest: /etc/sudoers.d/ansible
+    owner: root
+    group: root
+    mode: 0440
+
+- name: add ssh key for ansible user
+  tags: always
+  ansible.builtin.authorized_key:
+    user: ansible
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/7YRmnwDggJnC9KEo6RF1n+jCCE/x7ZU2AuAJRMtVd8OWsbF1w6QnxATUeLEy3pXjlVTq09/VbS6duu/CwBIpGuDFACpgCamYklj8GIR7pK0piilso8wK0KH6s2xPmVvYgK4aVUnPvkJr0jUY+D+PJ6tk+QN2w4CeqxDwfckPLRJryF90BM+ArETCoODNF0MRGjJfxIL3n2LxI5lPmli3KyV3maw92w0YvI8Q/P7QOb0bFPImNy1hGo8WraskhertTfk5g+g1N5+tIEzfrRtkSHyj0XRAJD2lh6hZZC2DPByRJVZFiQ5h+5daxMq4hKJfbyDtitMbjoxxvy2GTGEOHnUDrC9GmPenKCwrLx39ESS04Q9liBuThUVMFDQTK0QnL7WGiTosfVi3akZj8JM5JCYF7aQncPnKb3WlQ6xSmJuE+evJ5doYzfBF31AGCn0QeuGDP8YMMFOSDhEZPB8jXrNfACVxH1LsBDpeZ55fGOdfxAEy72FDgK22O5o10bE= ansible@waualx01d.dqdev.ad"
+
+

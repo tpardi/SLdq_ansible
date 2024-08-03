@@ -1,0 +1,6 @@
+---
+# Linux app servers
+- name: ensure serviceis running
+  ansible.builtin.service:
+    name: httpd
+    state: stopped

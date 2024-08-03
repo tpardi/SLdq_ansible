@@ -1,0 +1,7 @@
+---
+# Oracle DB server roles ( Linux specific )
+- name: 1st attempt at roles
+  tags: always
+  ansible.builtin.dnf:
+    update_cache: yes
+  when: ansible_distribution == "RedHat"
