@@ -1,0 +1,9 @@
+apptype: sugarcrm
+backup: no
+appfunc: db
+apptier: test
+nfs: none
+vm: yes
+ansible_user: ansible
+db_type: mysql
+cluster: none

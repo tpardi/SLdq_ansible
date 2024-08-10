@@ -1,0 +1,9 @@
+apptype: iws
+backup: no
+appfunc: app
+apptier: test
+nfs: none
+vm: yes
+ansible_user: ansible
+db_type: db2
+cluster: none

@@ -1,0 +1,12 @@
+---
+- name: Creating a User with Ansible Playbook
+  hosts: app_servers
+  become: yes
+  tasks:
+    - name: Create the user
+      user:
+        name: "{{ a }}"
+        password: "{{ b }}"
+        home: "{{ c }}"
+        uid: "{{ d }}"
+        shell: "{{ e }}"

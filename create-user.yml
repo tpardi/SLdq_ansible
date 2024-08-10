@@ -1,0 +1,12 @@
+---
+- name: Create User
+  hosts: localhosts
+  become: yes
+  tasks: 
+    - name: Create User
+      user:
+        name: ansibleuser
+        state: present
+  
+      
+      

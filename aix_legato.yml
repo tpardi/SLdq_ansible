@@ -1,0 +1,40 @@
+---
+
+- name: AIX oslevel checking playbook
+  hosts: aix_servers
+  vars:
+    ansible_python_interpreter: /opt/freeware/bin/python3.9
+  tasks:
+
+  - name: Copy the LGTO installation files
+    copy:
+      src: /fs011/lgto/aix/lgto/
+      dest: /tmp/NEW/
+      mode: 755
+      debug:
+    when: " backup  == 'restore_only' or  backup  == 'yes'"
+
+  - name: Copy the NMDA installation files
+    copy:
+      src: /fs011/lgto/aix/nmda/
+      dest: /tmp/NEW/
+      mode: 755
+    when: " appfunc  == 'db'"
+
+  - name: Uninstall Networker
+    shell:
+      cmd: installp -u LGTOnmda.rte LGTOnw.xtdclnt.rte LGTOnw.man.rte LGTOnw.clnt.rte
+
+  - name: Install Networker
+    shell:
+      cmd: cd /tmp/NEW; installp -acXd . LGTOnw.clnt.rte LGTOnw.man.rte LGTOnw.xtdclnt.rte
+
+  - name: Install Networker Module fo Database and Applications
+    shell:
+      cmd: installp -a -d /tmp/NEW LGTOnmda.rte
+    when: " appfunc  == 'db'"
+
+  - name: Create a symbolic link
+    shell:
+      cmd: . /home/oracle/19c.env; cd ${ORACLE_HOME}/lib; ln -s /usr/lib/libnsrora.so libobk.so
+    when: " appfunc  == 'db' and  apptier  != 'prod'"

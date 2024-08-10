@@ -1,0 +1,8 @@
+apptype: db
+backup: yes
+appfunc: rman
+apptier: prod
+nfs: mount
+vm: yes
+ansible_user: ansible
+cluster: none

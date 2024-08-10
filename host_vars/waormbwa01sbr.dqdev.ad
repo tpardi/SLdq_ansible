@@ -1,0 +1,9 @@
+apptype: ormb
+backup: restore_only
+appfunc: app
+apptier: dev
+nfs: mount
+vm: yes
+ansible_user: root
+db_type: none
+cluster: none

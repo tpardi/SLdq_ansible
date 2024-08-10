@@ -11,8 +11,6 @@
   ansible.builtin.copy:
     src: sudoers_ansible
     dest: /etc/sudoers.d/ansible
-    owner: root
-    group: root
     mode: 0440
 
 - name: add ssh key for ansible user

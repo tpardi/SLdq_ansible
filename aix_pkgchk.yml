@@ -1,0 +1,14 @@
+---
+
+- name: Prep AIX for Ansible
+  become: true
+  hosts: all
+  tasks:
+
+  - name: Populate fileset facts with the installation state for the most recent
+    ansible.builtin.file:
+      src: /opt/freeware/bin/python3.9
+      dest:
+        - /usr/bin/python
+        - /usr/bin/python3.9
+      state: link

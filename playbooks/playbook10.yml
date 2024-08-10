@@ -1,0 +1,10 @@
+---
+- name: Use hosts scope
+  hosts: waebsweb02t.dqtest.ad
+  become: yes
+  tasks:
+   - name: Install firewall
+     dnf:
+             name: "{{a}}"
+             state: "{{b}}"
+             update_cache: "{{c}}"

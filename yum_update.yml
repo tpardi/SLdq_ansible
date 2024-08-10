@@ -1,0 +1,10 @@
+---
+# Make sure all packages are up to date
+- name: Update your system
+  hosts: waebsodb01t.dqtest.ad
+  become: true
+  tasks:
+  - name: Make sure all packages are up to date
+    yum:
+      name: "*"
+      state: latest

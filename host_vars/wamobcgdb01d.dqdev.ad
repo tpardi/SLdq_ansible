@@ -1,0 +1,9 @@
+apptype: mobius
+backup: restore_only
+appfunc: db
+apptier: dev
+nfs: mount
+vm: yes
+ansible_user: ansible
+db_type: oracle
+cluster: none

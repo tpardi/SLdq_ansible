@@ -1,0 +1,15 @@
+---
+
+- hosts: waormbwa01trr.dqtest.ad
+  remote_user: fakesudo
+  tasks:
+  - name: create a developer user
+    user: name=jay
+          shell=/bin/ksh
+          generate_ssh_key=yes
+          state=present
+
+- hosts: waormbwa01trr.dqtest.ad
+  remote_user: fakesudo
+  roles: 
+  -  "{{ ROLES }}" 

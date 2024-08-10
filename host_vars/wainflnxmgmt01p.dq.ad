@@ -1,0 +1,9 @@
+apptype: rhel
+backup: no
+appfunc: mgmt
+apptier: prod
+nfs: none
+vm: yes
+ansible_user: ansible
+db_type: none
+cluster: none

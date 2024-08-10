@@ -1,0 +1,6 @@
+**** DentaQuest Network Access Policy ****
+***** WARNIG *****
+*
+Unauthorized use of this system is prohibited and may be subject to civil and criminal prosecution or employee discipline.
+*
+This system is the property of DentaQuest LLC. All use of the system may be monitored.

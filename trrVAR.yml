@@ -1,0 +1,17 @@
+---
+# variables in action
+- name: Prep AIX for Ansible
+  become: true
+  hosts: all
+  tasks:
+
+  - name: Gather LPP Facts
+    shell: "oslevel -s"
+    register: output_oslevel
+
+  - name: Populate fileset facts with the installation state for the most recent
+    debug: 
+      msg: "{{ ansible_hostname }} is a {{ DB }} {{ output_oslevel.stdout }}" 
+      ok: [waormbwa01trr.dqtest.ad] => {
+    "msg": "waormbwa01trr is a oracle 7200-03-03-1914"
+

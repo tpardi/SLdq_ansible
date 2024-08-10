@@ -1,0 +1,39 @@
+---
+- hosts: all
+  become: true
+  pre_tasks:
+
+    - name: install updates for RHEL
+      tags: always
+      ansible.builtin.dnf:
+        update_only: yes
+        update_cache: yes
+      when: ansible_distribution == "RedHat"
+
+    - name: install updates for Aix Toolbox
+      tags: always
+      ansible.builtin.dnf:
+        update_only: yes
+        update_cache: yes
+      when: ansible_distribution == "AIX"
+
+- hosts: all
+  become: true
+  roles:
+    - base
+
+- hosts: odb_servers
+  become: true
+  roles:
+    - odb_servers
+
+- hosts: app_servers
+  become: true
+  roles:
+    - app_servers
+
+- hosts: aix_servers
+  become: true
+  roles:
+    - aix_servers
+

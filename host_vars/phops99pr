@@ -1,0 +1,9 @@
+apptype: rman
+backup: restore_only
+appfunc: rman
+apptier: prod
+nfs: none
+vm: yes
+ansible_user: root
+db_type: oracle
+cluster: none

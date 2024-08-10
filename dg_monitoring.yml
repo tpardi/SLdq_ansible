@@ -1,0 +1,49 @@
+---
+# DQ UA tools for performance and monitoring
+- name: Install, configure and schedule monitoring
+  become: true
+  hosts: all
+  tasks:
+
+  - name: Install NMON
+    ansible.builtin.dnf:
+      name: http://10.93.221.83/rhel-8.6/ua/nmon-16p-5.el8.x86_64.rpm
+      disable_gpg_check: True
+      state: latest
+
+  - name: Create SYSADM folder
+    ansible.builtin.file:
+      path: /SYSADM/scripts
+      state: directory
+      mode: '0755'    
+
+  - name: Create /usr/local/logs nmon data
+    ansible.builtin.file:
+      path: /usr/local/logs
+      state: directory
+      mode: '0755'
+
+  - name: Copy scripts to SYSADM
+    copy:
+      src: /SYSADM/scripts/
+      dest: /SYSADM/scripts/
+      force: no
+      mode: '0755'
+
+  - name: Schedule NMON data collection
+    ansible.builtin.cron:
+      name: NMON data collection
+      minute: 00
+      hour: 1
+      job: /SYSADM/scripts/nmon.capture.sh
+
+  - name: Schedule disk space check
+    ansible.builtin.cron:
+      name: check space
+      minute: 15
+      job: /SYSADM/scripts/linux_chk
+
+  - name: Add UA scripts path
+    copy:
+      src: files/.bashrc
+      dest: /root/

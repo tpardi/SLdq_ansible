@@ -1,0 +1,7 @@
+apptype:
+backup: no
+appfunc:
+apptier:
+nfs: none
+vm:
+ansible_user: ansible

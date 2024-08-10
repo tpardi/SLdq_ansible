@@ -1,0 +1,10 @@
+---
+
+- name: Prep AIX for Ansible
+  hosts: all
+  vars:
+    pkgtype: yum
+  collections:
+    - ibm.power_aix
+  roles:
+    - power_aix_bootstrap

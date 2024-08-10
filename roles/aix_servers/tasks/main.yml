@@ -1,2 +1,9 @@
 ---
-# AIX stuff oh boy (as Mickey Mouse)
+# Oh Boy
+  - name: Gather LPP Facts
+    shell: "oslevel -s"
+    register: output_oslevel
+
+  - name: Print the oslevel
+    debug:
+      msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }} and is running a {{ DB }} database"

@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Copy LGTO rpm file to server
+      ansible.builtin.copy:
+        src: /fs011/lgto/RPM/
+        dest: /tmp/
+
+    - name: Install package.
+      shell: dnf -y install /tmp/lgto*.rpm

@@ -1,0 +1,9 @@
+apptype: ebs
+backup: restore_only
+appfunc: app
+apptier: test
+nfs: mount
+vm: yes
+ansible_user: root
+db_type: none
+cluster: none

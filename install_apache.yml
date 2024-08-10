@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become:i true
+
+- name: unstall apache2 package
+  ansible.builtin.shell:
+

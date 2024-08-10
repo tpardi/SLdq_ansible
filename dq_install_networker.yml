@@ -9,14 +9,21 @@
       src: /fs011/lgto/aix/lgto/
       dest: /tmp/NEW/
       mode: 755
-    when: ansible_distribution == 'AIX' and hostvars[inventory_hostname].sncat == 'aixdb'
+    when: "group == 'aix_servers' and backup == 'yes' or backup == 'restore_only"
+    notify: NSR_shut
 
   - name: Copy the NMDA installation files
     copy:
       src: /fs011/lgto/aix/nmda/
       dest: /tmp/NEW/
       mode: 755
-    when: ansible_distribution == 'AIX' and hostvars[inventory_hostname].sncat == 'aixdb'
+    when: "appfunc == 'db'"
+  
+  - name: Check Networker service enabled Redhat Linux
+    ansible.builtin.service:
+      name: networker.service
+      enabled: yes
+    when: ansible_distribution == 'RedHat'
 
   - name: Install Networker Redhat Linux
     ansible.builtin.dnf:
@@ -27,25 +34,46 @@
       disable_gpg_check: True
       state: latest
     when: ansible_distribution == 'RedHat'
+    notify:
+      - Enable Networker service
+      - Restart Networker service
 
   - name: Install Networker NMDA Redhat Linux
     ansible.builtin.dnf:
       name: http://10.93.221.83/rhel-8.6/lgtonmda-19.7.0.5-1.x86_64.rpm
       disable_gpg_check: True
       state: latest
-    when: ansible_distribution == 'RedHat' and hostvars[inventory_hostname].sncat == 'linuxdb'
+    when: "ansible_distribution == 'RedHat' and appfunc == 'db'"
 
   - name: Install Networker AIX
-    shell:
-      cmd: cd /tmp/NEW; installp -acXd . LGTOnw.clnt.rte LGTOnw.man.rte LGTOnw.xtdclnt.rte
+    ansible.builtin.shell: cd /tmp/NEW; installp -acXd . LGTOnw.clnt.rte LGTOnw.man.rte LGTOnw.xtdclnt.rte
+    notfiy:
+      - NSR_start
     when: ansible_distribution == 'AIX'
 
   - name: Install Networker NMDA AIX
-    shell:
-      cmd: cd /tmp/NEW; installp -acXd . LGTOnmda.rte 
-    when: ansible_distribution == 'AIX' and hostvars[inventory_hostname].sncat  == 'aixdb'
-  
+    ansible.builtin.shell: cd /tmp/NEW; installp -acXd . LGTOnmda.rte
+    when: "ansible_distribution == 'AIX' and appfunc == 'db'"
+    notify:
+      - NSR_start
+
   - name: Create a symbolic link
-    shell:
-      cmd: . /home/oracle/19c.env; cd ${ORACLE_HOME}/lib; ln -s /usr/lib/libnsrora.so libobk.so
-    when: hostvars[inventory_hostname].sncat == 'linuxdb' or hostvars[inventory_hostname].sncat == 'aixdb'
+    ansible.builtin.shell: . /home/oracle/19c.env; cd ${ORACLE_HOME}/lib; ln -s /usr/lib/libnsrora.so libobk.so
+    when: "appfunc == 'db'"
+
+    handlers:
+  - name : Enable Networker service
+    ansible.builtin.service:
+      name: networker.service
+      enabled: yes
+
+  - name: Restart Networker service
+    ansible.builtin.service:
+      name: networker.service
+      state: restarted
+
+  - name: NSR_shut
+    ansible.builtin.shell: /usr/bin/nsr_shutdown
+
+  - name: NSR_start
+    ansible.builtin.shell: /usr/bin/nsr_shutdown; /etc/rc.nsr

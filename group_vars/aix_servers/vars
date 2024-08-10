@@ -1,0 +1,2 @@
+ansible_python_interpreter: /opt/freeware/bin/python3.9
+ansible_user: root

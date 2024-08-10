@@ -1,0 +1,66 @@
+---
+# Creating sshd config
+- name: Update your system sshd_config file
+  become: true
+  hosts: all
+  tasks:
+
+   - name: Create a SYSADM directory if it does not exist
+     ansible.builtin.file:
+      path: /SYSADM/scripts
+      state: directory
+      mode: '0755'
+
+   - name: Replace PermitRootLogin entry with our own
+     ansible.builtin.lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^(.*)PermitRootLogin no'
+      line: "PermitRootLogin yes # kilroy was here ;-)"
+
+   - name: Replace PrintMotd entry with our own
+     ansible.builtin.lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^PrintMotd no'
+      line: "PrintMotd yes  # kilroy was here ;-)"
+
+
+   - name: Make sure login banner is on
+     ansible.builtin.lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^#Banner'
+      line: "Banner /etc/dqbanner # kilroy was here ;-)"
+     register: sshd_config
+
+   - name: Add DQ network warning
+     ansible.builtin.copy:
+      src: templates/dqbanner
+      dest: /etc/dqbanner
+     register: sshd_config
+     when: ansible_distribution == "RedHat"
+
+   - name: ReStart the sshd service if Changed
+     service:
+       name: sshd
+       enabled: yes
+       state: restarted
+     when: sshd_config.changed
+
+   - name: Add DQ quote of the dAY
+     ansible.builtin.copy:
+      src: templates/mvq.txt
+      dest: /etc/mvq.txt
+      mode: '0755'
+     when: ansible_distribution == "RedHat"
+
+   - name: Add DQ update quote script
+     ansible.builtin.copy:
+      src: templates/motd_up.sh
+      dest: /SYSADM/scripts/motd_up.sh
+      mode: '0755'
+
+   - name: Ensure quote of the day update at 5am
+     ansible.builtin.cron:
+      name: "Update Quote of the Day"
+      minute: "0"
+      hour: "5"
+      job: "/SYSADM/scripts/motd_up.sh"

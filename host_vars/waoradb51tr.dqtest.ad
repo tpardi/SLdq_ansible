@@ -1,0 +1,9 @@
+apptype: ebs
+backup: restore_only
+appfunc: db
+apptier: test
+nfs: both
+vm: yes
+ansible_user: root
+db_type: oracle
+cluster: none

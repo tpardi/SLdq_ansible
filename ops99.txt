@@ -1,0 +1,2187 @@
+phops99pr | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.83.221.65"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "::1%1"
+        ],
+        "ansible_apparmor": {
+            "status": "disabled"
+        },
+        "ansible_architecture": "chrp",
+        "ansible_date_time": {
+            "date": "2024-07-31",
+            "day": "31",
+            "epoch": "1722421077",
+            "epoch_int": "1722421077",
+            "hour": "06",
+            "iso8601": "2024-07-31T10:17:57Z",
+            "iso8601_basic": "20240731T061757912103",
+            "iso8601_basic_short": "20240731T061757",
+            "iso8601_micro": "2024-07-31T10:17:57.912103Z",
+            "minute": "17",
+            "month": "07",
+            "second": "57",
+            "time": "06:17:57",
+            "tz": "EDT",
+            "tz_dst": "EDT",
+            "tz_offset": "EDT",
+            "weekday": "Wednesday",
+            "weekday_number": "3",
+            "weeknumber": "31",
+            "year": "2024"
+        },
+        "ansible_default_ipv4": {
+            "address": "10.83.221.65",
+            "broadcast": "10.83.221.255",
+            "device": "en0",
+            "flags": [
+                "UP",
+                "BROADCAST",
+                "NOTRAILERS",
+                "RUNNING",
+                "SIMPLEX",
+                "MULTICAST",
+                "GROUPRT",
+                "64BIT",
+                "CHECKSUM_OFFLOAD(ACTIVE)",
+                "THREAD",
+                "LARGESEND",
+                "CHAIN"
+            ],
+            "gateway": "10.83.221.1",
+            "interface": "en0",
+            "macaddress": "fe:d4:45:07:33:02",
+            "mtu": "1500",
+            "netmask": "255.255.255.0",
+            "network": "10.83.221.0",
+            "type": "ether"
+        },
+        "ansible_default_ipv6": {},
+        "ansible_devices": {
+            "L2cache0": {
+                "attributes": {
+                    "size": "0"
+                },
+                "state": "Available",
+                "type": "L2 Cache"
+            },
+            "altinst_rootvg": {
+                "attributes": {
+                    "auto_on": "n",
+                    "cache_pbuf_cnt": "0",
+                    "conc_auto_on": "n",
+                    "conc_capable": "n",
+                    "gbl_pbufs_ppv": "0",
+                    "gbl_pbufs_pvg": "0",
+                    "timestamp": "66609e7432c45799",
+                    "vg_pbufs_ppv": "0",
+                    "vgserial_id": "00f9ceb800004c000000018fe93cf69a"
+                },
+                "state": "Available",
+                "type": "Volume group"
+            },
+            "cluster0": {
+                "attributes": {
+                    "clrpvid": "00000000000000000000000000000000",
+                    "clvdisk": "00000000-0000-0000-0000-000000000000",
+                    "configure": "yes",
+                    "node_uuid": "00000000-0000-0000-0000-000000000000"
+                },
+                "state": "Available",
+                "type": "Cluster Node"
+            },
+            "en0": {
+                "attributes": {
+                    "alias4": "IPv4",
+                    "alias6": "IPv6",
+                    "arp": "on",
+                    "authority": "Authorized",
+                    "broadcast": "Broadcast",
+                    "monitor": "off",
+                    "mtu": "1500",
+                    "mtu_bypass": "on",
+                    "netaddr": "10.83.221.65",
+                    "netaddr6": "IPv6",
+                    "netmask": "255.255.255.0",
+                    "prefixlen": "Prefix",
+                    "remmtu": "576",
+                    "rfc1323": "Enable/Disable",
+                    "security": "none",
+                    "state": "up",
+                    "tcp_mssdflt": "1460",
+                    "tcp_nodelay": "Enable/Disable",
+                    "tcp_recvspace": "Set",
+                    "tcp_sendspace": "Set",
+                    "thread": "on"
+                },
+                "state": "Available",
+                "type": "Standard Ethernet Network Interface"
+            },
+            "ent0": {
+                "attributes": {
+                    "alt_addr": "0x000000000000",
+                    "buf_mode": "max_min",
+                    "chksum_offload": "yes",
+                    "copy_buffs": "32",
+                    "copy_bytes": "65536",
+                    "desired_mapmem": "0",
+                    "ipv6_offload": "no",
+                    "max_buf_control": "64",
+                    "max_buf_huge": "64",
+                    "max_buf_large": "64",
+                    "max_buf_medium": "256",
+                    "max_buf_small": "2048",
+                    "max_buf_tiny": "2048",
+                    "min_buf_control": "24",
+                    "min_buf_huge": "24",
+                    "min_buf_large": "48",
+                    "min_buf_medium": "230",
+                    "min_buf_small": "1024",
+                    "min_buf_tiny": "512",
+                    "poll_uplink": "no",
+                    "poll_uplink_int": "1000",
+                    "trace_debug": "no",
+                    "use_alt_addr": "no"
+                },
+                "state": "Available",
+                "type": "Virtual I/O Ethernet Adapter (l-lan)"
+            },
+            "et0": {
+                "attributes": {
+                    "alias4": "IPv4",
+                    "alias6": "IPv6",
+                    "arp": "on",
+                    "authority": "Authorized",
+                    "broadcast": "Broadcast",
+                    "mtu": "1492",
+                    "netaddr": "Internet",
+                    "netaddr6": "IPv6",
+                    "netmask": "Subnet",
+                    "prefixlen": "Prefix",
+                    "remmtu": "576",
+                    "rfc1323": "Enable/Disable",
+                    "security": "none",
+                    "state": "down",
+                    "tcp_mssdflt": "Set",
+                    "tcp_nodelay": "Enable/Disable",
+                    "tcp_recvspace": "Set",
+                    "tcp_sendspace": "Set"
+                },
+                "state": "Defined",
+                "type": "IEEE 802.3 Ethernet Network Interface"
+            },
+            "fcs0": {
+                "attributes": {
+                    "intr_priority": "3",
+                    "lg_term_dma": "0x800000",
+                    "max_xfer_size": "0x100000",
+                    "num_cmd_elems": "2048",
+                    "sw_fc_class": "2"
+                },
+                "state": "Available",
+                "type": "52-T1 Virtual Fibre Channel Client Adapter"
+            },
+            "fcs1": {
+                "attributes": {
+                    "intr_priority": "3",
+                    "lg_term_dma": "0x800000",
+                    "max_xfer_size": "0x100000",
+                    "num_cmd_elems": "2048",
+                    "sw_fc_class": "2"
+                },
+                "state": "Available",
+                "type": "62-T1 Virtual Fibre Channel Client Adapter"
+            },
+            "fscsi0": {
+                "attributes": {
+                    "attach": "switch",
+                    "dyntrk": "yes",
+                    "fc_err_recov": "fast_fail",
+                    "scsi_id": "0xa00122",
+                    "sw_fc_class": "3"
+                },
+                "state": "Available",
+                "type": "52-T1-01 FC SCSI I/O Controller Protocol Device"
+            },
+            "fscsi1": {
+                "attributes": {
+                    "attach": "switch",
+                    "dyntrk": "yes",
+                    "fc_err_recov": "fast_fail",
+                    "scsi_id": "0x2e01c1",
+                    "sw_fc_class": "3"
+                },
+                "state": "Available",
+                "type": "62-T1-01 FC SCSI I/O Controller Protocol Device"
+            },
+            "fslv_b01": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "/b01",
+                    "lvserial_id": "00f9ceb800004c0000000183ccdf8161.1",
+                    "relocatable": "y",
+                    "size": "400",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "fslv_d01": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "/d01",
+                    "lvserial_id": "00f9ceb800004c0000000183ccceb4fa.3",
+                    "relocatable": "y",
+                    "size": "480",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "fslv_r01": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "/r01",
+                    "lvserial_id": "00f9ceb800004c0000000183ccceb4fa.5",
+                    "relocatable": "y",
+                    "size": "32",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "fslv_r02": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "/r02",
+                    "lvserial_id": "00f9ceb800004c0000000183ccceb4fa.7",
+                    "relocatable": "y",
+                    "size": "32",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "fslv_u01": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "/u01",
+                    "lvserial_id": "00f9ceb800004c0000000183ccceb4fa.1",
+                    "relocatable": "y",
+                    "size": "800",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd1": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "/home",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.10",
+                    "relocatable": "y",
+                    "size": "192",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd10opt": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "/opt",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.11",
+                    "relocatable": "y",
+                    "size": "256",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd11admin": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "/admin",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.12",
+                    "relocatable": "y",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd2": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "/usr",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.7",
+                    "relocatable": "y",
+                    "size": "188",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd3": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "/tmp",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.9",
+                    "relocatable": "y",
+                    "size": "280",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd4": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "/",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.6",
+                    "relocatable": "y",
+                    "size": "64",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd5": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "e",
+                    "label": "primary_bootlv",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.1",
+                    "relocatable": "n",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "boot",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd6": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.2",
+                    "relocatable": "y",
+                    "size": "59",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "paging",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd8": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.5",
+                    "relocatable": "y",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2log",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hd9var": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "/var",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.8",
+                    "relocatable": "y",
+                    "size": "128",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "hdisk0": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0xe000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "00f9ceb8ccced4690000000000000000",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303031303509SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk1": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0xf000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "00f9ceb8cd00c8590000000000000000",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303031303609SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk10": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0xb000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00020",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030334309SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2485"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk11": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0xc000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030334409SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk12": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0xd000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030334509SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk16": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x11000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "00f9ceb8ccceb47e0000000000000000",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303031303809SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk17": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x12000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "00f9ceb8ccdf80220000000000000000",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303031303909SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk18": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x0",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0x2e0000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030303109SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2404"
+                },
+                "state": "Available",
+                "type": "62-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk2": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x10000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "00f9ceb8ccedf15a0000000000000000",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303031303709SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk20": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x1000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030333209SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk21": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x2000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030333309SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk22": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x3000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030333409SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk3": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x4000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030333509SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk4": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x5000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030333609SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk5": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x6000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030333709SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk6": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x7000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030333809SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk7": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x8000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030333909SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk8": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0x9000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030334109SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "hdisk9": {
+                "attributes": {
+                    "PCM": "PCM/friend/MSYMM_VGER",
+                    "PR_key_value": "none",
+                    "algorithm": "round_robin",
+                    "clr_q": "yes",
+                    "dist_err_pcnt": "0",
+                    "dist_tw_width": "50",
+                    "hcheck_cmd": "inquiry",
+                    "hcheck_interval": "60",
+                    "hcheck_mode": "nonactive",
+                    "location": "Location",
+                    "lun_id": "0xa000000000000",
+                    "lun_reset_spt": "yes",
+                    "max_coalesce": "0x100000",
+                    "max_retries": "5",
+                    "max_transfer": "0x100000",
+                    "node_name": "0x50000973980f27ff",
+                    "pvid": "none",
+                    "q_err": "no",
+                    "q_type": "simple",
+                    "queue_depth": "32",
+                    "reserve_policy": "no_reserve",
+                    "reset_delay": "0",
+                    "rw_timeout": "40",
+                    "scsi_id": "0xa00000",
+                    "start_timeout": "180",
+                    "timeout_policy": "fail_path",
+                    "unique_id": "382136000097000019760096953303030334209SYMMETRIX03EMCfcp",
+                    "ww_name": "0x50000973980f2405"
+                },
+                "state": "Available",
+                "type": "52-T1-01 EMC Symmetrix FCP MPIO VG3R"
+            },
+            "inet0": {
+                "attributes": {
+                    "authm": "65536",
+                    "bootup_option": "no",
+                    "gateway": "Gateway",
+                    "hostname": "phops99pr",
+                    "rout6": "IPv6",
+                    "route": "net,-hopcount,0,,0,10.83.221.1"
+                },
+                "state": "Available",
+                "type": "Internet Network Extension"
+            },
+            "iocp0": {
+                "attributes": {
+                    "autoconfig": "available"
+                },
+                "state": "Available",
+                "type": "I/O Completion Ports"
+            },
+            "iscsi0": {
+                "attributes": {
+                    "disc_filename": "/etc/iscsi/targets",
+                    "disc_policy": "file",
+                    "initiator_name": "iqn.localhost.hostid.7f000001",
+                    "isns_srvnames": "auto",
+                    "isns_srvports": "iSNS",
+                    "isw_err_recov": "delayed_fail",
+                    "max_targets": "16",
+                    "max_xfer_size": "0x80000",
+                    "num_cmd_elems": "200"
+                },
+                "state": "Available",
+                "type": "iSCSI Protocol Device"
+            },
+            "livedump": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "/var/adm/ras/livedump",
+                    "lvserial_id": "00f9ceb800004c000000014ff59eb5d7.13",
+                    "relocatable": "y",
+                    "size": "2",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2",
+                    "upperbound": "32"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "lo0": {
+                "attributes": {
+                    "mtu": "16896",
+                    "netaddr": "127.0.0.1",
+                    "netaddr6": "::1",
+                    "netmask": "Subnet",
+                    "prefixlen": "IPv6",
+                    "rfc1323": "Enable/Disable",
+                    "state": "up",
+                    "tcp_mssdflt": "Set",
+                    "tcp_nodelay": "Enable/Disable",
+                    "tcp_recvspace": "Set",
+                    "tcp_sendspace": "Set"
+                },
+                "state": "Available",
+                "type": "Loopback Network Interface"
+            },
+            "loglv00": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccedf1d4.4",
+                    "relocatable": "y",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2log",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "loglv02": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccceb4fa.2",
+                    "relocatable": "y",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2log",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "loglv03": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccceb4fa.4",
+                    "relocatable": "y",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2log",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "loglv04": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccceb4fa.6",
+                    "relocatable": "y",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2log",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "loglv05": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccceb4fa.8",
+                    "relocatable": "y",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2log",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "loglv06": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "m",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccdf8161.2",
+                    "relocatable": "y",
+                    "size": "1",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "jfs2log",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "lus": {
+                "attributes": {},
+                "state": "Available",
+                "type": "Legato User SCSI Release 19.2.1.2.Build.118"
+            },
+            "lvdd": {
+                "attributes": {},
+                "state": "Available",
+                "type": "LVM Device Driver"
+            },
+            "mem0": {
+                "attributes": {
+                    "ent_mem_cap": "I/O",
+                    "goodsize": "131072",
+                    "mem_exp_factor": "Memory",
+                    "size": "131072",
+                    "var_mem_weight": "Variable"
+                },
+                "state": "Available",
+                "type": "Memory"
+            },
+            "paging04": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccedf1d4.1",
+                    "relocatable": "y",
+                    "size": "64",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "paging",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "paging05": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccedf1d4.2",
+                    "relocatable": "y",
+                    "size": "64",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "paging",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "paging06": {
+                "attributes": {
+                    "copies": "1",
+                    "inter": "m",
+                    "intra": "c",
+                    "label": "None",
+                    "lvserial_id": "00f9ceb800004c0000000183ccedf1d4.3",
+                    "relocatable": "y",
+                    "size": "64",
+                    "strictness": "y",
+                    "stripe_size": "Stripe",
+                    "stripe_width": "Striping",
+                    "type": "paging",
+                    "upperbound": "1024"
+                },
+                "state": "Defined",
+                "type": "Logical volume"
+            },
+            "pkcs11": {
+                "attributes": {
+                    "comp_trace": "no",
+                    "io_threads": "8",
+                    "proc_heap_sz": "8",
+                    "trc_adm": "no",
+                    "trc_clic": "no",
+                    "trc_context": "no",
+                    "trc_dd": "no",
+                    "trc_hw": "no",
+                    "trc_io": "no",
+                    "trc_k_klib": "no",
+                    "trc_k_ulib": "no",
+                    "trc_malloc": "no",
+                    "trc_meta": "no",
+                    "trc_mmap": "no",
+                    "trc_obj": "no",
+                    "trc_req": "no",
+                    "trc_sess": "no",
+                    "trc_slot": "no",
+                    "trc_token": "no",
+                    "trc_u_lib": "no",
+                    "trc_util": "no",
+                    "y4_max_req": "16"
+                },
+                "state": "Available",
+                "type": "ACF/PKCS#11 Device"
+            },
+            "powerpath0": {
+                "attributes": {},
+                "state": "Defined",
+                "type": "N/A"
+            },
+            "proc0": {
+                "attributes": {
+                    "frequency": "3425000000",
+                    "smt_enabled": "false",
+                    "smt_threads": "8",
+                    "state": "enable",
+                    "type": "PowerPC_POWER8"
+                },
+                "state": "Available",
+                "type": "00-00 Processor"
+            },
+            "proc16": {
+                "attributes": {
+                    "frequency": "3425000000",
+                    "smt_enabled": "false",
+                    "smt_threads": "8",
+                    "state": "enable",
+                    "type": "PowerPC_POWER8"
+                },
+                "state": "Available",
+                "type": "00-16 Processor"
+            },
+            "proc24": {
+                "attributes": {
+                    "frequency": "3425000000",
+                    "smt_enabled": "false",
+                    "smt_threads": "8",
+                    "state": "enable",
+                    "type": "PowerPC_POWER8"
+                },
+                "state": "Available",
+                "type": "00-24 Processor"
+            },
+            "proc4": {
+                "attributes": {
+                    "frequency": "3425000000",
+                    "smt_enabled": "true",
+                    "smt_threads": "4",
+                    "state": "enable",
+                    "type": "PowerPC_POWER8"
+                },
+                "state": "Defined",
+                "type": "00-04 Processor"
+            },
+            "proc8": {
+                "attributes": {
+                    "frequency": "3425000000",
+                    "smt_enabled": "false",
+                    "smt_threads": "8",
+                    "state": "enable",
+                    "type": "PowerPC_POWER8"
+                },
+                "state": "Available",
+                "type": "00-08 Processor"
+            },
+            "pty0": {
+                "attributes": {
+                    "ATTnum": "256",
+                    "BSDnum": "16",
+                    "autoconfig": "available",
+                    "csmap": "sbcs"
+                },
+                "state": "Available",
+                "type": "Asynchronous Pseudo-Terminal"
+            },
+            "rcm0": {
+                "attributes": {},
+                "state": "Defined",
+                "type": "Rendering Context Manager Subsystem"
+            },
+            "rootvg": {
+                "attributes": {
+                    "auto_on": "y",
+                    "cache_pbuf_cnt": "0",
+                    "conc_auto_on": "n",
+                    "conc_capable": "n",
+                    "gbl_pbufs_ppv": "0",
+                    "gbl_pbufs_pvg": "0",
+                    "timestamp": "669a81771955751d",
+                    "vg_pbufs_ppv": "2048",
+                    "vgserial_id": "00f9ceb800004c000000014ff59eb5d7"
+                },
+                "state": "Defined",
+                "type": "Volume group"
+            },
+            "sfw0": {
+                "attributes": {
+                    "enable_sas": "no",
+                    "vltag": "3358"
+                },
+                "state": "Available",
+                "type": "Storage Framework Module"
+            },
+            "sfwcomm0": {
+                "attributes": {},
+                "state": "Available",
+                "type": "52-T1-01-FF Fibre Channel Storage Framework Comm"
+            },
+            "sfwcomm1": {
+                "attributes": {},
+                "state": "Available",
+                "type": "62-T1-01-FF Fibre Channel Storage Framework Comm"
+            },
+            "sys0": {
+                "attributes": {
+                    "SW_dist_intr": "false",
+                    "autorestart": "true",
+                    "boottype": "disk",
+                    "capacity_inc": "0.01",
+                    "capped": "true",
+                    "chown_restrict": "true",
+                    "clouddev": "0",
+                    "conslogin": "enable",
+                    "cpuguard": "enable",
+                    "dedicated": "false",
+                    "enhanced_RBAC": "true",
+                    "ent_capacity": "4.00",
+                    "ex_intr_virt": "false",
+                    "frequency": "0",
+                    "fullcore": "false",
+                    "fwversion": "IBM,FW860.A1",
+                    "ghostdev": "0",
+                    "id_to_partition": "0X800013DBC6F00005",
+                    "id_to_system": "0X800013DBC6F00000",
+                    "iostat": "true",
+                    "keylock": "normal",
+                    "log_pg_dealloc": "true",
+                    "max_capacity": "4.00",
+                    "max_logname": "20",
+                    "maxbuf": "20",
+                    "maxmbuf": "1000000",
+                    "maxpout": "16386",
+                    "maxuproc": "16384",
+                    "min_capacity": "1.00",
+                    "minpout": "8192",
+                    "modelname": "IBM,8284-22A",
+                    "ncargs": "256",
+                    "nfs4_acl_compat": "secure",
+                    "ngroups_allowed": "128",
+                    "os_uuid": "7abd058f-329c-4427-821e-8a47671ebcd0",
+                    "partition_uuid": "68b427fd-4503-4a0a-8f39-f7ee750a3cd1",
+                    "pmuaccess": "all",
+                    "pre430core": "false",
+                    "pre520tune": "disable",
+                    "realmem": "134217728",
+                    "rtasversion": "1",
+                    "secure_boot": "Policy_0(Disabled)",
+                    "sed_config": "select",
+                    "signpolicy": "none",
+                    "systemid": "IBM,0221CEB8V",
+                    "variable_weight": "0"
+                },
+                "state": "Available",
+                "type": "System Object"
+            },
+            "sysplanar0": {
+                "attributes": {},
+                "state": "Available",
+                "type": "System Planar"
+            },
+            "vgorabin": {
+                "attributes": {
+                    "auto_on": "y",
+                    "cache_pbuf_cnt": "0",
+                    "conc_auto_on": "n",
+                    "conc_capable": "n",
+                    "gbl_pbufs_ppv": "0",
+                    "gbl_pbufs_pvg": "0",
+                    "timestamp": "6346e27912f0b44f",
+                    "vg_pbufs_ppv": "0",
+                    "vgserial_id": "00f9ceb800004c0000000183ccceb4fa"
+                },
+                "state": "Defined",
+                "type": "Volume group"
+            },
+            "vgoraio": {
+                "attributes": {
+                    "auto_on": "y",
+                    "cache_pbuf_cnt": "0",
+                    "conc_auto_on": "n",
+                    "conc_capable": "n",
+                    "gbl_pbufs_ppv": "0",
+                    "gbl_pbufs_pvg": "0",
+                    "timestamp": "6346e3dc2e558132",
+                    "vg_pbufs_ppv": "0",
+                    "vgserial_id": "00f9ceb800004c0000000183ccdf8161"
+                },
+                "state": "Defined",
+                "type": "Volume group"
+            },
+            "vgswap": {
+                "attributes": {
+                    "auto_on": "y",
+                    "cache_pbuf_cnt": "0",
+                    "conc_auto_on": "n",
+                    "conc_capable": "n",
+                    "gbl_pbufs_ppv": "0",
+                    "gbl_pbufs_pvg": "0",
+                    "timestamp": "66019f9b0c25174e",
+                    "vg_pbufs_ppv": "0",
+                    "vgserial_id": "00f9ceb800004c0000000183ccedf1d4"
+                },
+                "state": "Defined",
+                "type": "Volume group"
+            },
+            "vio0": {
+                "attributes": {
+                    "bus_id": "0x90000340"
+                },
+                "state": "Available",
+                "type": "Virtual I/O Bus"
+            },
+            "vsa0": {
+                "attributes": {
+                    "desired_mapmem": "I/O"
+                },
+                "state": "Available",
+                "type": "LPAR Virtual Serial Adapter"
+            },
+            "vscsi0": {
+                "attributes": {
+                    "rw_timeout": "300",
+                    "vscsi_err_recov": "delayed_fail",
+                    "vscsi_path_to": "0"
+                },
+                "state": "Available",
+                "type": "Virtual SCSI Client Adapter"
+            },
+            "vscsi1": {
+                "attributes": {
+                    "rw_timeout": "300",
+                    "vscsi_err_recov": "delayed_fail",
+                    "vscsi_path_to": "0"
+                },
+                "state": "Available",
+                "type": "Virtual SCSI Client Adapter"
+            },
+            "vty0": {
+                "attributes": {
+                    "autoconfig": "available",
+                    "bpc": "8",
+                    "csmap": "sbcs",
+                    "discard": "^o",
+                    "dsusp": "^y",
+                    "eof": "^d",
+                    "eol": "^@",
+                    "eol2": "^?",
+                    "erase": "^h",
+                    "flow_disp": "xon",
+                    "imap": "none",
+                    "intr": "^c",
+                    "kill": "^u",
+                    "lnext": "^v",
+                    "logger": "LOGGER",
+                    "login": "disable",
+                    "logmodes": "hupcl,cread,echoe,cs8",
+                    "modules": "ldterm",
+                    "omap": "none",
+                    "open_disp": "dtropen",
+                    "parity": "none",
+                    "quit": "^\\",
+                    "reprint": "^r",
+                    "runmodes": "hupcl,cread,brkint,icrnl,opost,tab3,onlcr,isig,icanon,echo,echoe,echok,echoctl,echoke,imaxbel,iexten",
+                    "speed": "19200",
+                    "start": "^q",
+                    "stop": "^s",
+                    "stops": "1",
+                    "susp": "^z",
+                    "term": "vt220",
+                    "timeout": "0",
+                    "werase": "^w"
+                },
+                "state": "Available",
+                "type": "Asynchronous Terminal"
+            }
+        },
+        "ansible_distribution": "AIX",
+        "ansible_distribution_major_version": "7",
+        "ansible_distribution_release": "2",
+        "ansible_distribution_version": "7.2",
+        "ansible_dns": {
+            "domain": "dq.ad",
+            "nameservers": [
+                "10.83.124.21",
+                "10.83.124.31"
+            ],
+            "options": {
+                "attempts": "2"
+            },
+            "search": [
+                "dq.ad",
+                "dentaquest.com",
+                "dqtest.ad",
+                "dqdev.ad",
+                "dqdmz.ad"
+            ]
+        },
+        "ansible_domain": "dq.ad",
+        "ansible_effective_group_id": 4,
+        "ansible_effective_user_id": 400,
+        "ansible_en0": {
+            "device": "en0",
+            "flags": [
+                "UP",
+                "BROADCAST",
+                "NOTRAILERS",
+                "RUNNING",
+                "SIMPLEX",
+                "MULTICAST",
+                "GROUPRT",
+                "64BIT",
+                "CHECKSUM_OFFLOAD(ACTIVE)",
+                "THREAD",
+                "LARGESEND",
+                "CHAIN"
+            ],
+            "ipv4": [
+                {
+                    "address": "10.83.221.65",
+                    "broadcast": "10.83.221.255",
+                    "netmask": "255.255.255.0",
+                    "network": "10.83.221.0"
+                }
+            ],
+            "ipv6": [],
+            "macaddress": "fe:d4:45:07:33:02",
+            "mtu": "1500",
+            "type": "ether"
+        },
+        "ansible_env": {
+            "AIXTHREAD_COND_DEBUG": "OFF",
+            "AIXTHREAD_MUTEX_DEBUG": "OFF",
+            "AIXTHREAD_RWLOCK_DEBUG": "OFF",
+            "AIXTHREAD_SCOPE": "S",
+            "AUTHSTATE": "compat",
+            "CLCMD_PASSTHRU": "1",
+            "EXTENDED_HISTORY": "ON",
+            "HOME": "/home/ansible",
+            "LANG": "en_US",
+            "LC__FASTMSG": "true",
+            "LDR_CNTRL": "MAXDATA=0",
+            "LOCPATH": "/usr/lib/nls/loc",
+            "LOGIN": "ansible",
+            "LOGNAME": "ansible",
+            "MAIL": "/var/spool/mail/ansible",
+            "NLSPATH": "/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat:/usr/lib/nls/msg/%l.%c/%N:/usr/lib/nls/msg/%l.%c/%N.cat",
+            "ODMDIR": "/etc/objrepos",
+            "PATH": "/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java5/jre/bin:/usr/java5/bin",
+            "PWD": "/home/ansible",
+            "SHELL": "/usr/bin/bash",
+            "SHLVL": "1",
+            "SPINLOOPTIME": "650",
+            "SSH_CLIENT": "10.93.221.83 15832 22",
+            "SSH_CONNECTION": "10.93.221.83 15832 10.83.221.65 22",
+            "SSH_TTY": "/dev/pts/1",
+            "TERM": "xterm",
+            "TZ": "America/New_York",
+            "USER": "ansible",
+            "_": "/usr/bin/python2.7"
+        },
+        "ansible_fibre_channel_wwn": [
+            "C05076086EC60008",
+            "C05076086EC6000A"
+        ],
+        "ansible_fips": false,
+        "ansible_firmware_version": "FW860.A1",
+        "ansible_fqdn": "phops99pr.dq.ad",
+        "ansible_hostname": "phops99pr",
+        "ansible_hostnqn": "",
+        "ansible_interfaces": [
+            "en0",
+            "lo0"
+        ],
+        "ansible_is_chroot": false,
+        "ansible_iscsi_iqn": "iqn.localhost.hostid.7f000001",
+        "ansible_kernel": "2",
+        "ansible_kernel_version": "7",
+        "ansible_lo0": {
+            "device": "lo0",
+            "flags": [
+                "UP",
+                "BROADCAST",
+                "LOOPBACK",
+                "RUNNING",
+                "SIMPLEX",
+                "MULTICAST",
+                "GROUPRT",
+                "64BIT",
+                "LARGESEND",
+                "CHAIN"
+            ],
+            "ipv4": [
+                {
+                    "address": "127.0.0.1",
+                    "broadcast": "127.255.255.255",
+                    "netmask": "255.0.0.0",
+                    "network": "127.0.0.0"
+                }
+            ],
+            "ipv6": [
+                {
+                    "address": "::1%1",
+                    "prefix": "64"
+                }
+            ],
+            "macaddress": "unknown",
+            "mtu": "16896",
+            "type": "unknown"
+        },
+        "ansible_local": {},
+        "ansible_lpar_info": "5 phops99pr",
+        "ansible_lsb": {},
+        "ansible_machine": "00F9CEB84C00",
+        "ansible_memfree_mb": 543,
+        "ansible_memtotal_mb": 131072,
+        "ansible_mounts": [
+            {
+                "block_available": 1411242,
+                "block_size": 4096,
+                "block_total": 2097152,
+                "block_used": 685910,
+                "device": "/dev/hd4",
+                "fstype": "jfs2",
+                "inode_available": 1275810,
+                "inode_total": 1304997,
+                "inode_used": 29187,
+                "mount": "/",
+                "options": "rw,log=/dev/hd8",
+                "size_available": 5780447232,
+                "size_total": 8589934592,
+                "time": "May 14 16:55"
+            },
+            {
+                "block_available": 1381553,
+                "block_size": 4096,
+                "block_total": 6160384,
+                "block_used": 4778831,
+                "device": "/dev/hd2",
+                "fstype": "jfs2",
+                "inode_available": 1285624,
+                "inode_total": 1349679,
+                "inode_used": 64055,
+                "mount": "/usr",
+                "options": "rw,log=/dev/hd8",
+                "size_available": 5658841088,
+                "size_total": 25232932864,
+                "time": "May 14 16:55"
+            },
+            {
+                "block_available": 805909,
+                "block_size": 4096,
+                "block_total": 4194304,
+                "block_used": 3388395,
+                "device": "/dev/hd9var",
+                "fstype": "jfs2",
+                "inode_available": 727485,
+                "inode_total": 744267,
+                "inode_used": 16782,
+                "mount": "/var",
+                "options": "rw,log=/dev/hd8",
+                "size_available": 3301003264,
+                "size_total": 17179869184,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 5131921,
+                "block_size": 4096,
+                "block_total": 9175040,
+                "block_used": 4043119,
+                "device": "/dev/hd3",
+                "fstype": "jfs2",
+                "inode_available": 4612490,
+                "inode_total": 4633771,
+                "inode_used": 21281,
+                "mount": "/tmp",
+                "options": "rw,log=/dev/hd8",
+                "size_available": 21020348416,
+                "size_total": 37580963840,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 3925590,
+                "block_size": 4096,
+                "block_total": 6291456,
+                "block_used": 2365866,
+                "device": "/dev/hd1",
+                "fstype": "jfs2",
+                "inode_available": 3530189,
+                "inode_total": 3534373,
+                "inode_used": 4184,
+                "mount": "/home",
+                "options": "rw,log=/dev/hd8",
+                "size_available": 16079216640,
+                "size_total": 25769803776,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 32672,
+                "block_size": 4096,
+                "block_total": 32768,
+                "block_used": 96,
+                "device": "/dev/hd11admin",
+                "fstype": "jfs2",
+                "inode_available": 29124,
+                "inode_total": 29137,
+                "inode_used": 13,
+                "mount": "/admin",
+                "options": "rw,log=/dev/hd8",
+                "size_available": 133824512,
+                "size_total": 134217728,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 0,
+                "block_size": 1024,
+                "block_total": 4294967295,
+                "block_used": 4294967295,
+                "device": "/proc",
+                "fstype": "procfs",
+                "inode_available": 0,
+                "inode_total": 0,
+                "inode_used": 0,
+                "mount": "/proc",
+                "options": "rw",
+                "size_available": 0,
+                "size_total": 4398046510080,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 627190,
+                "block_size": 4096,
+                "block_total": 8388608,
+                "block_used": 7761418,
+                "device": "/dev/hd10opt",
+                "fstype": "jfs2",
+                "inode_available": 581020,
+                "inode_total": 646638,
+                "inode_used": 65618,
+                "mount": "/opt",
+                "options": "rw,log=/dev/hd8",
+                "size_available": 2568970240,
+                "size_total": 34359738368,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 65444,
+                "block_size": 4096,
+                "block_total": 65536,
+                "block_used": 92,
+                "device": "/dev/livedump",
+                "fstype": "jfs2",
+                "inode_available": 58200,
+                "inode_total": 58204,
+                "inode_used": 4,
+                "mount": "/var/adm/ras/livedump",
+                "options": "rw,log=/dev/hd8",
+                "size_available": 268058624,
+                "size_total": 268435456,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 3319926,
+                "block_size": 4096,
+                "block_total": 26214400,
+                "block_used": 22894474,
+                "device": "/dev/fslv_u01",
+                "fstype": "jfs2",
+                "inode_available": 3144538,
+                "inode_total": 3561573,
+                "inode_used": 417035,
+                "mount": "/u01",
+                "options": "rw,log=/dev/loglv02",
+                "size_available": 13598416896,
+                "size_total": 107374182400,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 6542317,
+                "block_size": 4096,
+                "block_total": 15728640,
+                "block_used": 9186323,
+                "device": "/dev/fslv_d01",
+                "fstype": "jfs2",
+                "inode_available": 5815922,
+                "inode_total": 5816224,
+                "inode_used": 302,
+                "mount": "/d01",
+                "options": "rw,log=/dev/loglv03",
+                "size_available": 26797330432,
+                "size_total": 64424509440,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 1007759,
+                "block_size": 4096,
+                "block_total": 1048576,
+                "block_used": 40817,
+                "device": "/dev/fslv_r01",
+                "fstype": "jfs2",
+                "inode_available": 895869,
+                "inode_total": 895881,
+                "inode_used": 12,
+                "mount": "/r01",
+                "options": "rw,log=/dev/loglv04",
+                "size_available": 4127780864,
+                "size_total": 4294967296,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 1007759,
+                "block_size": 4096,
+                "block_total": 1048576,
+                "block_used": 40817,
+                "device": "/dev/fslv_r02",
+                "fstype": "jfs2",
+                "inode_available": 895869,
+                "inode_total": 895881,
+                "inode_used": 12,
+                "mount": "/r02",
+                "options": "rw,log=/dev/loglv05",
+                "size_available": 4127780864,
+                "size_total": 4294967296,
+                "time": "May 14 16:56"
+            },
+            {
+                "block_available": 9957081,
+                "block_size": 4096,
+                "block_total": 13107200,
+                "block_used": 3150119,
+                "device": "/dev/fslv_b01",
+                "fstype": "jfs2",
+                "inode_available": 8851185,
+                "inode_total": 8866514,
+                "inode_used": 15329,
+                "mount": "/b01",
+                "options": "rw,log=/dev/loglv06",
+                "size_available": 40784203776,
+                "size_total": 53687091200,
+                "time": "May 14 16:56"
+            },
+            {
+                "device": "phnim46pr.dq.ad:/DBA",
+                "fstype": "nfs3",
+                "mount": "/mnt/DBA",
+                "options": "bg,hard,intr,sec=sys,rw",
+                "time": "May 14 16:56"
+            },
+            {
+                "device": "phnim46pr.dq.ad:/export/mksysb",
+                "fstype": "nfs3",
+                "mount": "/mnt/mksysb",
+                "options": "",
+                "time": "May 14 16:56"
+            },
+            {
+                "device": "wanim200tr:/export/nim/SERVICE_PACKS",
+                "fstype": "nfs3",
+                "mount": "/mnt/patch",
+                "options": "",
+                "time": "Jun 05 12:26"
+            }
+        ],
+        "ansible_nodename": "phops99pr",
+        "ansible_os_family": "AIX",
+        "ansible_pkg_mgr": "unknown",
+        "ansible_processor": "PowerPC_POWER8",
+        "ansible_processor_cores": 8,
+        "ansible_processor_count": 4,
+        "ansible_product_name": "IBM,8284-22A",
+        "ansible_product_serial": "21CEB8V",
+        "ansible_python": {
+            "executable": "/usr/bin/python2.7",
+            "has_sslcontext": false,
+            "type": "CPython",
+            "version": {
+                "major": 2,
+                "micro": 5,
+                "minor": 7,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                2,
+                7,
+                5,
+                "final",
+                0
+            ]
+        },
+        "ansible_python_version": "2.7.5",
+        "ansible_real_group_id": 4,
+        "ansible_real_user_id": 400,
+        "ansible_selinux": {
+            "status": "Missing selinux Python library"
+        },
+        "ansible_selinux_python_present": false,
+        "ansible_service_mgr": "src",
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAI8tBhgk16tVevVS1AJoU/rdL6VCqi+1RL+nJq8FpBFn/TXwG5cTV/BLGpmt3pIJbru3uvz+oJFTKLFOAshW8ETdQCeNEGft1BcKgFXGDlVRSOY+hknsRuLPbJ2XH1llJKHT7Vdd+tA8EdwVqGETL/Y1ZGLpljFpCJKQyNPB0texAAAAFQDkSsWPfXZXXRRusE4mFnR+4++cRwAAAIBqY1MZj+EjSVGG2iFuqG+lE3FNaxpWCkR0hpjb3l0sIDlHEV30eN0LUWhzxndmnjwpvMZWztRbPyRGuaLcSYmi7FWxTWl60rH4fmPn1oaNY5U9JC4vfYuLDVRSd5H5uAjGFeGoQYCdJwZNZRxBHzFBa7bCN/zl+xkW8vbI/aeVwAAAAIAMl0u6UFliHtEv0HzWi03e9SWnWjWzPevyluq7olVbQ/gh8cI0dOkh30xqddFcLE2BdIYZivM3yRDA6gzJvGeJPt0gI05XVHYW0N4X0WRO8xAUDgCO6AE6Nl0c4zyKZNdtF9ysN0VDoEiB5wYEQwPRvXOGIpQDalWDH7eLxddipw==",
+        "ansible_ssh_host_key_dsa_public_keytype": "ssh-dss",
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLkuIbHJ0mt2B3dNuxCP6sgfQvVqV2Y4/mtOkINOR4JgwjOXU6KNO1XLfMPkGYv3DLITgiAORBEkbFVEeYHf0Dw=",
+        "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIFWINH1D4e58PMMD9aaL/5R9KIJ1UBCM9KTJC1Nb+WHt",
+        "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDPm5o9pHZe4I9uWOkAIpwzcbAsyg9AfYXlLp5Wn13wdmtIJc9Zca+PGqf52qqporPeRWB7i8Grw1TiN66SnGM4QzdugV6mJ3bn0EQsrBiVsEpxZh1u9Bvh3dQ3G9OojWxKUw4Xcl5N69ul5MUvJGlPROhB9CBr+SVpwQ+QdBMWw0AYBP1RyCN1bm8H/Cd4/cpq6gDMESuIC3ak4pf5hyrAQ20ev4xaTV7jZamo+Up3uxGsv873Ac82uf3sGibaoxJff/I+LBWUtqAlqFgzQkZEzLK1WyRG7zzdl4uP7/gRidhTfBQI0K6WNJw9w7s9Wdz4vN6/w+PVMkpEhJjypLI/",
+        "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "ansible_swapfree_mb": 32128,
+        "ansible_swaptotal_mb": 32128,
+        "ansible_system": "AIX",
+        "ansible_system_capabilities": "N/A",
+        "ansible_system_capabilities_enforced": "N/A",
+        "ansible_user_dir": "/home/ansible",
+        "ansible_user_gecos": "ansible",
+        "ansible_user_gid": 4,
+        "ansible_user_id": "ansible",
+        "ansible_user_shell": "/usr/bin/bash",
+        "ansible_user_uid": 400,
+        "ansible_userspace_bits": "32",
+        "ansible_vgs": {
+            "rootvg": [
+                {
+                    "free_pps": "427",
+                    "pp_size": "128 megabyte(s)",
+                    "pv_name": "hdisk0",
+                    "pv_state": "active",
+                    "total_pps": "1599"
+                }
+            ],
+            "vgorabin": [
+                {
+                    "free_pps": "251",
+                    "pp_size": "128 megabyte(s)",
+                    "pv_name": "hdisk16",
+                    "pv_state": "active",
+                    "total_pps": "1599"
+                }
+            ],
+            "vgoraio": [
+                {
+                    "free_pps": "1198",
+                    "pp_size": "128 megabyte(s)",
+                    "pv_name": "hdisk17",
+                    "pv_state": "active",
+                    "total_pps": "1599"
+                }
+            ],
+            "vgswap": [
+                {
+                    "free_pps": "1406",
+                    "pp_size": "128 megabyte(s)",
+                    "pv_name": "hdisk2",
+                    "pv_state": "active",
+                    "total_pps": "1599"
+                }
+            ]
+        },
+        "ansible_virtualization_role": "",
+        "ansible_virtualization_tech_guest": [],
+        "ansible_virtualization_tech_host": [],
+        "ansible_virtualization_type": "",
+        "discovered_interpreter_python": "/usr/bin/python2.7",
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false,
+    "deprecations": []
+}

@@ -1,0 +1,32 @@
+- name: Creating Multiple Users with Ansible Playbook
+  hosts: "{{ target_hosts }}"
+  become: yes
+  vars:
+    target_hosts: app_servers
+    users:
+      - name: user1
+        password: "{{ user1_password | password_hash('sha512', 'SomeSalt') }}"
+        home: /home/user1
+        uid: 1001
+        shell: /bin/bash
+      - name: user2
+        password: "{{ user2_password | password_hash('sha512', 'SomeSalt') }}"
+        home: /home/user2
+        uid: 1002
+        shell: /bin/bash
+  vars_prompt:
+    - name: user1_password
+      prompt: "Enter the password for user1:"
+      private: yes
+    - name: user2_password
+      prompt: "Enter the password for user2:"
+      private: yes
+  tasks:
+    - name: Create the users
+      user:
+        name: "{{ item.name }}"
+        password: "{{ item.password }}"
+        home: "{{ item.home }}"
+        uid: "{{ item.uid }}"
+        shell: "{{ item.shell }}"
+      loop: "{{ users }}"

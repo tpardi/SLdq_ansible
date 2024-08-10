@@ -1,0 +1,63 @@
+[aix_clients]
+phops99pr
+wanim200tr.dqtest.ad ansible_host=10.93.221.200 ansible_user=root
+choradb11tr.dqtest.ad ansible_host=10.93.221.164 ansible_user=root
+chorafa12tr.dqtest.ad ansible_host=10.93.221.165 ansible_user=root
+waoradb21dr.dqdev.ad ansible_host=10.93.221.23 ansible_user=root
+waorafa22dr.dqdev.ad ansible_host=10.93.221.27 ansible_user=root
+waoradb31dr.dqdev.ad ansible_host=10.93.221.24 ansible_user=root
+waorafa32dr.dqdev.ad ansible_host=10.93.221.28 ansible_user=root
+waoradb41tr.dqtest.ad ansible_host=10.93.221.38 ansible_user=root
+waorafa42tr.dqtest.ad ansible_host=10.93.221.39 ansible_user=root
+waoradb61dr.dqdev.ad ansible_host=10.93.221.66 ansible_user=root
+waorafa62dr.dqdev.ad ansible_host=10.93.221.67 ansible_user=root
+waoradb51tr.dqtest.ad ansible_host=10.93.221.76 ansible_user=root
+waorafa52tr.dqtest.ad ansible_host=10.93.221.77 ansible_user=root
+waoradb71dr.dqdev.ad ansible_host=10.93.221.78 ansible_user=root
+waorafa72dr.dqdev.ad ansible_host=10.93.221.79 ansible_user=root
+waormbdb01sbr.dqdev.ad ansible_host=10.93.221. ansible_user=root
+waormbwa01sbr.dqdev.ad ansible_host=10.93.221.49 ansible_user=root
+waormbwa01ter.dqtest.ad ansible_host=10.93.221.50 ansible_user=root
+waormbwa02ter.dqtest.ad ansible_host=10.93.221.51 ansible_user=root
+waormbba01ter.dqtest.ad ansible_host=10.93.221.52 ansible_user=root
+waormbdb01ter.dqtest.ad ansible_host=10.93.221.53 ansible_user=root
+waormbdb02ter.dqtest.ad ansible_host=10.93.221.54 ansible_user=root
+waormbwa01gcr.dqtest.ad ansible_host=10.93.221.55 ansible_user=root
+waormbdb01gcr.dqtest.ad ansible_host=10.93.221.56 ansible_user=root
+waormbwa01trr.dqtest.ad ansible_host=10.93.221.57 ansible_user=root
+waormbdb01trr.dqtest.ad ansible_host=10.93.221.58 ansible_user=root
+waormbwa01der.dqdev.ad ansible_host=10.93.221.59 ansible_user=root
+waormbdb01der.dqdev.ad ansible_host=10.93.221.60 ansible_user=root
+
+
+[linux_clients]
+10.93.252.62
+waebsodb01t.dqtest.ad
+waebsweb01t.dqtest.ad
+waebsodb02t.dqtest.ad
+waebsweb02t.dqtest.ad
+waebsodb03t.dqtest.ad
+waebsweb03t.dqtest.ad
+waebsodb01d.dqdev.ad
+waebsweb01d.dqdev.ad
+waebsodb02d.dqdev.ad
+waebsweb02d.dqdev.ad
+waebsodb03d.dqdev.ad
+waebsweb03d.dqdev.ad
+wamobcgdb01d
+[ebs_app_srv]
+
+[ebs_db_srv]
+
+[rmb_app_srv]
+
+[rmb_db_srv]
+
+[obi_app_srv]
+
+[obi_db_srv]
+wamobcgdb01d
+
+nim01 ansible_host=10.0.0.5 ansible_user=root
+bruce ansible_host=10.0.0.6 ansible_user=root
+freddie ansible_host=10.0.0.7 ansible_user=root

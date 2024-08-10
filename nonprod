@@ -14,12 +14,10 @@
     waebsodb02d.dqdev.ad sncat=linuxdb
     waebsodb03d.dqdev.ad sncat=linuxdb
     wamobcgdb01d.dqdev.ad sncat=linuxdb 
-    phrmandb01p.dq.ad sncat=linuxdb
     waebsodb04d.dqdev.ad sncat=linuxdb
     waormbdb01d
     waormbodb04d.dqdev.ad
 [aix_servers]
-  phops99pr ansible_host=10.83.221.65 ansible_user=root sncat=aixdb
     chorafa12tr.dqtest.ad ansible_host=10.93.221.165 ansible_user=root sncat=aixapp
     wanim200tr.dqtest.ad ansible_host=10.93.221.200 ansible_user=root sncat=aixapp
     chorafa12tr.dqtest.ad ansible_host=10.93.221.165 ansible_user=root sncat=aixapp
@@ -62,7 +60,6 @@
     waebsodb02d.dqdev.ad
     waebsodb03d.dqdev.ad 
     wamobcgdb01d.dqdev.ad
-    phrmandb01p.dq.ad
     waebsodb04d.dqdev.ad
     waormbdb01d
     waormbodb04d.dqdev.ad
@@ -90,4 +87,5 @@
     wacrmuatsql01
     wainforanfs01p.dq.ad
     waormweb03d.dqdev.ad
-
+    waormodb06t.dqtest.ad
+waormodb05t.dqtest.ad

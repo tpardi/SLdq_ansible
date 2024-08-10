@@ -1,0 +1,9 @@
+apptype: oracle
+backup: no
+appfunc: mgmt
+apptier: test
+nfs: none
+vm: yes
+ansible_user: ansible
+db_type: oracle
+cluster: none

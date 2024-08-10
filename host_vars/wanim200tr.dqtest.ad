@@ -1,0 +1,9 @@
+apptype: mgmt
+backup: no
+appfunc: nim
+apptier: test
+nfs: export
+vm: yes
+ansible_user: root
+db_type: none
+cluster: none

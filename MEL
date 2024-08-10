@@ -1,0 +1,11 @@
+export PATH=$PATH:/opt/freeware/bin
+which python3.9
+
+
+dnf -y install python3.9-3.9.6-1.aix7.1.ppc.rpm
+
+
+ chmod +x dnf_aixtoolbox.sh; ./dnf_aixtoolbox.sh -d
+
+ln -s /opt/freeware/bin/python3 /usr/bin/python
+ln -s /opt/freeware/bin/python3.9 /usr/bin/python3.9

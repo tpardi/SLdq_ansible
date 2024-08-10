@@ -1,0 +1,8 @@
+apptype: sugarcrm
+backup: no
+appfunc: app
+apptier: dev
+nfs: none
+vm: yes
+ansible_user: ansible
+cluster: none

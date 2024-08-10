@@ -1,0 +1,63 @@
+---
+- name: This playbook is for installating or upgrading Networker
+  hosts: linux_clients
+  become: yes
+  tasks:
+   - name: Configure SSSD
+     ansible.builtin.lineinfile:
+      path: /etc/sssd/sssd.conf
+      search_string: 'dyndns_update'
+      line: dyndns_update = true
+
+   - name: Configure SSSD REFRSH
+     ansible.builtin.lineinfile:
+      path: /etc/sssd/sssd.conf
+      search_string: 'dyndns_refresh_interval'
+      line: dyndns_refresh_interval = 43200
+
+   - name: Configure SSSD PTR
+     ansible.builtin.lineinfile:
+      path: /etc/sssd/sssd.conf
+      search_string: 'dyndns_update_pt'
+      line: dyndns_update_ptr = true
+
+   - name: Configure SSSD TTl
+     ansible.builtin.lineinfile:
+      path: /etc/sssd/sssd.conf
+      search_string: 'dyndns_ttl'
+      line: dyndns_ttl = 3600
+
+   - name: Copy the installation files
+     copy:
+      src: /fs011/lgto/RPM/
+      dest: /tmp/NEW/
+      mode: '0755'
+
+   - name: Install the NetWorker client binaries
+     ansible.builtin.dnf:
+       name: 
+        - /tmp/NEW/lgtoclnt-19.11.0.0-1.i686.rpm
+        - /tmp/NEW/lgtonmda-19.7.0.5-1.x86_64.rpm
+        - /tmp/NEW/lgtoxtdclnt-19.11.0.0-1.i686.rpm
+     disable_gpg_check: True
+     state: present
+     notify: Start the NetWorker service
+
+   - name: Create a symbolic link
+     shell:
+      cmd: . /home/oracle/19c.env; cd ${ORACLE_HOME}/lib; ln -s /usr/lib/libnsrora.so libobk.so
+     when: " {{ apptype }} == db"
+
+  handlers:
+   - name: Start the NetWorker service
+     service:
+      name: networker
+      enabled: yes
+      state: restarted
+     notify: update servers file
+
+   - name: update servers file
+     copy:
+      content: "Backup_server"
+      dest: /nsr/res/servers
+     notify: Start the NetWorker service

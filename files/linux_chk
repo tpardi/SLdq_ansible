@@ -1,0 +1,38 @@
+#!/bin/bash
+
+check_size () {
+	SSIZE=$1
+	MP=`echo $SSIZE|awk -F! {'print $6'}`
+	AV=`echo $SSIZE|awk -F! {'print $4 '}`
+	FP=`echo $SSIZE|awk -F! {'print $5'}`
+	SP=`echo $SSIZE|awk -F! {'print $1'}`
+
+	echo "$MP is $FP Full with only $AV GB left, increase $SP\n" >>`hostname`.filesystems
+} # End check_size
+
+chk_mnt () {
+	for i in $(cat /etc/fstab |grep -v '#' |sed -E 's/[[:space:]]+/!/g'|grep -v none)
+	do
+	FM=`echo $i |awk -F! {'print $2'}`
+	FT=`echo $i |awk -F! {'print $3'}`
+	 /SYSADM/scripts/check_mount.sh $FM $FT	|grep -v check_mount.sh >>`hostname`.mounts
+	done
+} # End get_fstyp
+## MAIN ###
+
+##check_size $(df -h |sed -E 's/[[:space:]]+/!/g' |egrep "[6-9][2-9]%|100%")
+rm `hostname`.filesystems
+for TST in $(df -h |sed -E 's/[[:space:]]+/!/g' |egrep "9[2-9]%|100%")
+do
+check_size $TST
+done
+chk_mnt
+
+if [ -s `hostname`.filesystems  ]
+then
+echo "Is everything mounted correctly?" >>`hostname`.filesystems
+cat `hostname`.mounts >>`hostname`.filesystems
+cat `hostname`.filesystems |mailx -s "`hostname`.filesystems" -r NIXadmin@DQ.ad DL-UnixAdmin@greatdentalplans.com DL-ProductionControl@greatdentalplans.com
+rm `hostname`.mounts
+fi
+
